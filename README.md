@@ -1,5 +1,3 @@
-# react-5-standard-1st-assignment
-
 ## 과제 수행 방법
 
 - App.jsx 파일에 TODO: 로 표기된 주석을 확인하고 그 아래 부분을 확인하고 코드를 작성하세요.
