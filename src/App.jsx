@@ -59,12 +59,16 @@ function App() {
       <ul>
         {/* TODO: map 메소드를 이용해서 user 리스트를 렌더링하세요.  */}
         {/* 이름: John, 나이: 20 [삭제] 버튼이 하나의 행에 나올 수 있도록 해보세요. (hint: flex) */}
-        {users.map(user => (
-          <li key={user.id} className="user-item">
+        {users.map(user =>
+        {
+          return (<li key={user.id} className="user-item"> {/* jsx에서는 map문에서 return을 쓸 때 바로 옆에다가 써야 하고
+          여러 줄일 때는 그 return문을 중괄호로 묶어야 하고
+          return 내부는 소괄호로 묶는다. 만약 return 키워드를 생략하려면 중괄호를 없애고 소괄호로 대체 가능.
+        map문의 return 키워드 내부의 태그에서는 key 속성을 무조건 써줘야 한다. */}
             이름: {user.name}, 나이: {user.age}
             <button onClick={() => removeUser(user.id)}>삭제</button>
-          </li>
-        ))}
+          </li>)
+})}
       </ul>
     </>
   );
